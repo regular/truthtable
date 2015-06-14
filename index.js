@@ -4,13 +4,19 @@ insertCSS(styles);
 
 function truthtable(el, rows, options) {
     var doc = el.ownerDocument;
+    var symbols = '01';
 
-    function appendFields(tr, fields, cls) {
+    function appendFields(tr, fields) {
         for (var i=0, l=fields.length; i<l; ++i) {
             var td = doc.createElement('div');
-            td.classList.add(cls);
             td.classList.add('cell');
             td.innerHTML = fields[i];
+            var symbol = fields[i];
+            if (symbols.indexOf(symbol)>0) {
+                td.classList.add('on');
+            } else {
+                td.classList.add('off');
+            }
             tr.appendChild(td);
         }
     }

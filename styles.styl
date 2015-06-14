@@ -3,6 +3,7 @@
 
 cellBorderColor = base00()
 textColor = base02()
+highlightColor = alpha(sgreen(), 0.3)
 
 .truthtable
     color textColor
@@ -23,6 +24,7 @@ textColor = base02()
     .outputs
         padding-left .2em
     .cell
+        text-aligh center
         padding .5em
     .inputs .cell
         border-right 1px solid cellBorderColor
@@ -32,3 +34,13 @@ textColor = base02()
         border-left 1px solid cellBorderColor
         &:first-child
             border-left none
+
+    .outputs .cell.on
+         background-image:
+             radial-gradient(
+                circle closest-side,
+                    highlightColor 0%,
+                    highlightColor 90%,
+                    transparent 100%
+                );
+
