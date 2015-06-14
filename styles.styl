@@ -1,14 +1,22 @@
 @import 'node_modules/css-colors-solarized/styles/colors-solarized.styl'
 
-
 cellBorderColor = base00()
 textColor = base02()
 highlightColor = alpha(sgreen(), 0.3)
+highlightRadius = 70%
+highlightFallOff = 10%
 
 .truthtable
     color textColor
     display flex
     flex-direction column
+
+    .row:first-child
+        font-style italic
+        font-weight bold
+        sub
+            font-size 40%
+        border-bottom 1px solid cellBorderColor
     .row
         display flex
         flex-direction row
@@ -24,7 +32,8 @@ highlightColor = alpha(sgreen(), 0.3)
     .outputs
         padding-left .2em
     .cell
-        text-aligh center
+        width 2em
+        text-align center
         padding .5em
     .inputs .cell
         border-right 1px solid cellBorderColor
@@ -40,7 +49,7 @@ highlightColor = alpha(sgreen(), 0.3)
              radial-gradient(
                 circle closest-side,
                     highlightColor 0%,
-                    highlightColor 90%,
-                    transparent 100%
+                    highlightColor highlightRadius,
+                    transparent highlightRadius + highlightFallOff
                 );
 
