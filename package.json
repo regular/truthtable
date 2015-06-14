@@ -1,0 +1,25 @@
+{
+  "name": "truthtable",
+  "version": "1.0.0",
+  "description": "learn combinational logic interactively",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "logic",
+    "truth",
+    "table",
+    "education",
+    "learning"
+  ],
+  "author": "Jan Bölsche <jan@lagomorph.de> (http://regular.codes)",
+  "license": "MIT",
+  "devDependencies": {
+    "beefy": "^2.1.5",
+    "browserify": "^10.2.4",
+    "css-colors-solarized": "^0.9.2",
+    "insert-css": "^0.2.0",
+    "stylusify": "^2.0.0"
+  }
+}

@@ -1,0 +1,34 @@
+@import 'node_modules/css-colors-solarized/styles/colors-solarized.styl'
+
+
+cellBorderColor = base00()
+textColor = base02()
+
+.truthtable
+    color textColor
+    display flex
+    flex-direction column
+    .row
+        display flex
+        flex-direction row
+        background-color base3()
+    .row:nth-child(odd)
+        background-color base2()
+    .inputs, .outputs
+        display flex
+        flex-direction row
+    .inputs
+        padding-right .2em
+        border-right 2px solid cellBorderColor
+    .outputs
+        padding-left .2em
+    .cell
+        padding .5em
+    .inputs .cell
+        border-right 1px solid cellBorderColor
+        &:last-child
+            border-right none
+    .outputs .cell
+        border-left 1px solid cellBorderColor
+        &:first-child
+            border-left none
