@@ -61,7 +61,7 @@ var rows = [
 ];
 
 var table = {
-    header: {inputs: 'a3 a2 a1 a0'.split(' '), outputs: 'y1 y0'.split(' ')},
+    header: {inputs: 'a\u03053 a2 a1 a0'.split(' '), outputs: 'y1 y\u03050'.split(' ')},
     rows: rows
 };
 
